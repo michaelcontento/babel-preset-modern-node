@@ -1,0 +1,6 @@
+# created by `make test`
+/build/
+
+# NodeJS
+/node_modules/
+babel-preset-michaelcontento-*.tgz
