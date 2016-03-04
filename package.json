@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "babel-plugin-check-es2015-constants": "^6.3.13",
+    "babel-plugin-check-es2015-constants": "^6.6.5",
     "babel-plugin-syntax-trailing-function-commas": "^6.3.13",
     "babel-plugin-transform-async-to-generator": "^6.4.6",
     "babel-plugin-transform-class-constructor-call": "^6.4.0",
