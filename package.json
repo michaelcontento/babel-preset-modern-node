@@ -34,7 +34,7 @@
     "babel-plugin-transform-es2015-block-scoping": "^6.4.0",
     "babel-plugin-transform-es2015-classes": "^6.4.5",
     "babel-plugin-transform-es2015-computed-properties": "^6.4.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.6.5",
     "babel-plugin-transform-es2015-for-of": "^6.3.13",
     "babel-plugin-transform-es2015-function-name": "^6.4.0",
     "babel-plugin-transform-es2015-literals": "^6.3.13",
