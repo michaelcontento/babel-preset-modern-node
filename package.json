@@ -54,8 +54,7 @@
     "babel-plugin-transform-function-bind": "^6.5.2",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
     "babel-plugin-transform-regenerator": "^6.6.5",
-    "babel-plugin-transform-strict-mode": "^6.6.5",
-    "babel-plugin-version-inline": "^1.0.0"
+    "babel-plugin-transform-strict-mode": "^6.6.5"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5"
