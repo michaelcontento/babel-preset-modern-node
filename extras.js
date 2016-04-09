@@ -5,9 +5,7 @@ module.exports = {
         // default: "bar" -> "default": "bar"
         require('babel-plugin-transform-es3-property-literals'),
         // "use strict"
-        require('babel-plugin-transform-strict-mode'),
-        // __VERSION__
-        require('babel-plugin-version-inline').default
+        require('babel-plugin-transform-strict-mode')
     ],
     sourceMaps: "inline"
 };
