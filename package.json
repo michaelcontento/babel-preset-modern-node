@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-modern-node",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Babel preset for modern node apps",
   "author": "Michael Contento <michaelcontento@gmail.com>",
   "repository": {
