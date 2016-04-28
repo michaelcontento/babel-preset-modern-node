@@ -10,6 +10,7 @@ module.exports = {
         require('babel-plugin-transform-es2015-modules-commonjs'),
         // preset-stage-0
         require('babel-plugin-transform-function-bind'),
+        require('babel-plugin-transform-do-expressions'),
         // preset-stage-1
         require('babel-plugin-transform-class-constructor-call'),
         require('babel-plugin-transform-class-properties'),
