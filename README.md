@@ -21,7 +21,8 @@ transformations as possible.
 1. Read ["Configuring Babel 6" article][1] for more information about babel@6
 configuration.
 2. Decide which version of node you want to support
-3. Use `modern-node/$VERSION` (e.g. `modern-node/5.5`) as your preset
+3. Use `modern-node/$VERSION` (e.g. `modern-node/6.0`) as your preset
+4. Optionally add babel 'stage-0'
 
 ### Via `.babelrc` (recommended)
 
@@ -29,19 +30,19 @@ configuration.
 
 ```json
 {
-  "presets": ["modern-node/5.5"]
+  "presets": ["modern-node/6.0", "stage-0"]
 }
 ```
 
 ### Via CLI
 
-    babel script.js --presets modern-node/5.5
+    babel script.js --presets modern-node/6.0 stage-0
 
 ### Via Node API
 
 ```js
 require('babel-core').transform('code', {
-  presets: ['modern-node/5.5'],
+  presets: ['modern-node/6.0', 'stage-0'],
 })
 ```
 
