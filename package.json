@@ -49,7 +49,6 @@
     "babel-plugin-version-inline": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.6.5",
-    "babel-preset-stage-0": "^6.5.0"
+    "babel-cli": "^6.6.5"
   }
 }
