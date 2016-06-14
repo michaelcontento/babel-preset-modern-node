@@ -12,6 +12,10 @@ module.exports = {
 
 // __VERSION__
 const fs = require('fs');
-if (fs.statSync('package.json').isFile()) {
-    module.exports.plugins.push(require('babel-plugin-version-inline').default);
+try {
+    if (fs.statSync('package.json').isFile()) {
+        module.exports.plugins.push(require('babel-plugin-version-inline').default);
+    }
+} catch (err) {
+    // ignore: ENOENT: no such file or directory, stat 'package.json'
 }
