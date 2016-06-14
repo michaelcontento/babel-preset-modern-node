@@ -12,6 +12,12 @@ module.exports = {
 
 // __VERSION__
 const fs = require('fs');
-if (fs.statSync('package.json').isFile()) {
+
+var packageJsonExists = false;
+try {
+    packageJsonExists = fs.statSync('package.json').isFile();
+} catch (e) {}
+
+if (packageJsonExists) {
     module.exports.plugins.push(require('babel-plugin-version-inline').default);
 }
