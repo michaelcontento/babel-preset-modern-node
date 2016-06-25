@@ -23,6 +23,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-check-es2015-constants": "^6.6.5",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
     "babel-plugin-transform-es2015-block-scoped-functions": "^6.6.5",
