@@ -22,7 +22,7 @@ transformations as possible.
 configuration.
 2. Decide which version of node you want to support
 3. Use `modern-node/$VERSION` (e.g. `modern-node/6.0`) as your preset
-4. Optionally add babel 'stage-0'
+4. Optionally add babel `stage-0`
 
 ### Via `.babelrc` (recommended)
 
@@ -46,5 +46,34 @@ require('babel-core').transform('code', {
 })
 ```
 
+## Compatibility
+
+This preset currently supports ES2015 and ES2016 support for all minor node
+versions starting at `v0.12`.
+
+### Notes on `Array.includes`
+
+This preset **does not modify** the global space / prototypes! Due to this we're
+not able to fully support ES2016's `Array.includes`
+[see here][plugin-array-includes] for more details.
+
+### Special extras
+
+1. If you project contains a `package.json` the super global `__VERSION__`
+   will be set accordingly
+    * See [plugin-version-inline][]
+1. Strict mode will be enabled
+    * See [transform-strict-mode][]
+1. Restricted keywords will always be quoted
+    * `foo.default` becomes `foo["default"]`
+        * See [transform-es3-member-expression-literals][]
+    * `default: "bar"` becomes `"default": "bar"`
+        * See [transform-es3-property-literals][]
+
   [1]: http://www.2ality.com/2015/11/configuring-babel6.html
   [babel-preset-modern-node]: https://github.com/michaelcontento/babel-preset-modern-node
+  [plugin-version-inline]: https://www.npmjs.com/package/babel-plugin-version-inline
+  [transform-es3-member-expression-literals]: https://www.npmjs.com/package/babel-plugin-transform-es3-member-expression-literals
+  [transform-es3-property-literals]: https://www.npmjs.com/package/babel-plugin-transform-es3-property-literals
+  [transform-strict-mode]: https://www.npmjs.com/package/babel-plugin-transform-strict-mode
+  [plugin-array-includes]: https://www.npmjs.com/package/babel-plugin-array-includes
