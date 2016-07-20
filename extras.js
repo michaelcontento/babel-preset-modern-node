@@ -6,8 +6,7 @@ module.exports = {
         require('babel-plugin-transform-es3-property-literals'),
         // "use strict"
         require('babel-plugin-transform-strict-mode')
-    ],
-    sourceMaps: "inline"
+    ]
 };
 
 // __VERSION__
