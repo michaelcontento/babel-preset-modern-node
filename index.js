@@ -62,34 +62,34 @@ function preset(context, opts) {
     return {
         plugins: [
 // ---- v0.12
+            enableFor('0.12') && [require('babel-plugin-transform-regenerator'), { async: false, asyncGenerators: false }],
+            enableFor('0.12') && [require("babel-plugin-transform-es2015-classes"), { "loose": loose }],
+            enableFor('0.12') && [require("babel-plugin-transform-es2015-computed-properties"), { "loose": loose }],
+            enableFor('0.12') && [require("babel-plugin-transform-es2015-for-of"), { "loose": loose }],
+            enableFor('0.12') && [require("babel-plugin-transform-es2015-template-literals"), { "loose": loose }],
             enableFor('0.12') && require('babel-plugin-check-es2015-constants'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-arrow-functions'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-block-scoped-functions'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-block-scoping'),
-            enableFor('0.12') && [require("babel-plugin-transform-es2015-classes"), { "loose": loose }],
-            enableFor('0.12') && [require("babel-plugin-transform-es2015-computed-properties"), { "loose": loose }],
-            enableFor('0.12') && [require("babel-plugin-transform-es2015-for-of"), { "loose": loose }],
             enableFor('0.12') && require('babel-plugin-transform-es2015-literals'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-object-super'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-shorthand-properties'),
-            enableFor('0.12') && [require("babel-plugin-transform-es2015-template-literals"), { "loose": loose }],
             enableFor('0.12') && require('babel-plugin-transform-es2015-typeof-symbol'),
-            enableFor('0.12') && [require('babel-plugin-transform-regenerator'), { async: false, asyncGenerators: false }],
 // ---- v5.12
-            enableFor('5.12') && require('babel-plugin-transform-es2015-parameters'),
             enableFor('5.12') && [require("babel-plugin-transform-es2015-spread"), { "loose": loose }],
+            enableFor('5.12') && require('babel-plugin-transform-es2015-parameters'),
             enableFor('5.12') && require('babel-plugin-transform-es2015-sticky-regex'),
             enableFor('5.12') && require('babel-plugin-transform-es2015-unicode-regex'),
 // ---- v6.2
             enableFor('6.2') && require('babel-plugin-array-includes').default,
 // ---- v6.3
             enableFor('6.3') && [require("babel-plugin-transform-es2015-destructuring"), { "loose": loose }],
-            enableFor('6.3') && require('babel-plugin-transform-es2015-function-name'),
+            enableFor('6.3') && modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
             enableFor('6.3') && modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
             enableFor('6.3') && modules === "systemjs" && [require("babel-plugin-transform-es2015-modules-systemjs"), { "loose": loose }],
-            enableFor('6.3') && modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
             enableFor('6.3') && modules === "umd" && [require("babel-plugin-transform-es2015-modules-umd"), { "loose": loose }],
             enableFor('6.3') && require('babel-plugin-transform-es2015-duplicate-keys'),
+            enableFor('6.3') && require('babel-plugin-transform-es2015-function-name'),
             enableFor('6.3') && require('babel-plugin-transform-exponentiation-operator'),
 // --- EXTRAS
             // foo.default -> foo["default"]
