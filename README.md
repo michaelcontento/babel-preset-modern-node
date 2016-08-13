@@ -18,31 +18,49 @@ transformations as possible.
 
 ## Usage
 
-1. Read ["Configuring Babel 6" article][1] for more information about babel@6
-configuration.
-2. Decide which version of node you want to support
-3. Use `modern-node/$VERSION` (e.g. `modern-node/6.0`) as your preset
-4. Optionally add babel `stage-0`
+Simply use this preset as any other. Following options can be passed to
+configure `babel-preset-modern-node` to your taste:
+
+- Set loose mode optimizations (**default:** `false`)
+    - `loose = true|false`    
+- Module loader to use (**default:** `commonjs`)
+    - `modules = (false|commonjs|amd|umd|systemjs)`
+- Min node version compatibility (**default:** `process.versions.node`)
+    - `version = "5.10.2"`
 
 ### Via `.babelrc` (recommended)
 
-**.babelrc**
+```json
+{
+  "presets": ["modern-node"]
+}
+```
+
+Or:
 
 ```json
 {
-  "presets": ["modern-node/6.0", "stage-0"]
+  "presets": [["modern-node", { "loose": true, ... }]]
 }
 ```
 
 ### Via CLI
 
-    babel script.js --presets modern-node/6.0,stage-0
+    babel script.js --presets modern-node
 
 ### Via Node API
 
 ```js
 require('babel-core').transform('code', {
-  presets: ['modern-node/6.0', 'stage-0'],
+  presets: ['modern-node'],
+})
+```
+
+Or:
+
+```js
+require('babel-core').transform('code', {
+  presets: [['modern-node', { "loose": true, ... }]],
 })
 ```
 
