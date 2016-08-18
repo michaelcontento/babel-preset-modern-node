@@ -82,15 +82,15 @@ function preset(context, opts) {
             enableFor('5.12') && require('babel-plugin-transform-es2015-unicode-regex'),
 // ---- v6.2
             enableFor('6.2') && require('babel-plugin-array-includes').default,
-// ---- v6.3
-            enableFor('6.3') && [require("babel-plugin-transform-es2015-destructuring"), { "loose": loose }],
-            enableFor('6.3') && modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
-            enableFor('6.3') && modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
-            enableFor('6.3') && modules === "systemjs" && [require("babel-plugin-transform-es2015-modules-systemjs"), { "loose": loose }],
-            enableFor('6.3') && modules === "umd" && [require("babel-plugin-transform-es2015-modules-umd"), { "loose": loose }],
-            enableFor('6.3') && require('babel-plugin-transform-es2015-duplicate-keys'),
-            enableFor('6.3') && require('babel-plugin-transform-es2015-function-name'),
-            enableFor('6.3') && require('babel-plugin-transform-exponentiation-operator'),
+// ---- v6.4
+            enableFor('6.4') && [require("babel-plugin-transform-es2015-destructuring"), { "loose": loose }],
+            enableFor('6.4') && modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
+            enableFor('6.4') && modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
+            enableFor('6.4') && modules === "systemjs" && [require("babel-plugin-transform-es2015-modules-systemjs"), { "loose": loose }],
+            enableFor('6.4') && modules === "umd" && [require("babel-plugin-transform-es2015-modules-umd"), { "loose": loose }],
+            enableFor('6.4') && require('babel-plugin-transform-es2015-duplicate-keys'),
+            enableFor('6.4') && require('babel-plugin-transform-es2015-function-name'),
+            enableFor('6.4') && require('babel-plugin-transform-exponentiation-operator'),
 // --- EXTRAS
             // foo.default -> foo["default"]
             require('babel-plugin-transform-es3-member-expression-literals'),
