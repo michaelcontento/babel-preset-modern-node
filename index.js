@@ -86,6 +86,7 @@ function preset(context, opts) {
             enableFor('6.4') && [require("babel-plugin-transform-es2015-destructuring"), { "loose": loose }],
             enableFor('6.4') && require('babel-plugin-transform-es2015-function-name'),
 // ---- v6.5
+            enableFor('6.5') && require('babel-plugin-syntax-trailing-function-commas'), // ES2017
             enableFor('6.5') && require('babel-plugin-transform-es2015-duplicate-keys'),
             enableFor('6.5') && require('babel-plugin-transform-exponentiation-operator'),
 // --- MODULES
