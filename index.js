@@ -88,7 +88,7 @@ function preset(context, opts) {
 // ---- v6.5
             enableFor('6.5') && require('babel-plugin-syntax-trailing-function-commas'), // ES2017
             enableFor('6.5') && require('babel-plugin-transform-es2015-duplicate-keys'),
-            enableFor('6.5') && require('babel-plugin-transform-exponentiation-operator'),
+            enableFor('6.5') && require('babel-plugin-transform-exponentiation-operator'), // ES2016
 // --- MODULES
             modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
             modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
