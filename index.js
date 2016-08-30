@@ -84,13 +84,15 @@ function preset(context, opts) {
             enableFor('6.2') && require('babel-plugin-array-includes').default,
 // ---- v6.4
             enableFor('6.4') && [require("babel-plugin-transform-es2015-destructuring"), { "loose": loose }],
-            enableFor('6.4') && modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
-            enableFor('6.4') && modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
-            enableFor('6.4') && modules === "systemjs" && [require("babel-plugin-transform-es2015-modules-systemjs"), { "loose": loose }],
-            enableFor('6.4') && modules === "umd" && [require("babel-plugin-transform-es2015-modules-umd"), { "loose": loose }],
-            enableFor('6.4') && require('babel-plugin-transform-es2015-duplicate-keys'),
             enableFor('6.4') && require('babel-plugin-transform-es2015-function-name'),
-            enableFor('6.4') && require('babel-plugin-transform-exponentiation-operator'),
+// ---- v6.5
+            enableFor('6.5') && require('babel-plugin-transform-es2015-duplicate-keys'),
+            enableFor('6.5') && require('babel-plugin-transform-exponentiation-operator'),
+// --- MODULES
+            modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
+            modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
+            modules === "systemjs" && [require("babel-plugin-transform-es2015-modules-systemjs"), { "loose": loose }],
+            modules === "umd" && [require("babel-plugin-transform-es2015-modules-umd"), { "loose": loose }],
 // --- EXTRAS
             // foo.default -> foo["default"]
             require('babel-plugin-transform-es3-member-expression-literals'),
