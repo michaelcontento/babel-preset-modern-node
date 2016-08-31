@@ -38,7 +38,7 @@ function preset(context, opts) {
     }
 
     if (!version) {
-        throw new Error("Preset moder-node 'version' option must be set");
+        throw new Error("Preset modern-node 'version' option must be set");
     }
 
     var semver = require('semver');
