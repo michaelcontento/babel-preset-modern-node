@@ -61,7 +61,7 @@ function preset(context, opts) {
 
     return {
         plugins: [
-// ---- v0.12
+// ---- <= v0.12
             enableFor('0.12') && [require('babel-plugin-transform-regenerator'), { async: false, asyncGenerators: false }],
             enableFor('0.12') && [require("babel-plugin-transform-es2015-classes"), { "loose": loose }],
             enableFor('0.12') && [require("babel-plugin-transform-es2015-computed-properties"), { "loose": loose }],
@@ -75,20 +75,20 @@ function preset(context, opts) {
             enableFor('0.12') && require('babel-plugin-transform-es2015-object-super'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-shorthand-properties'),
             enableFor('0.12') && require('babel-plugin-transform-es2015-typeof-symbol'),
-// ---- v5.12
+// ---- <= v5.12
             enableFor('5.12') && [require("babel-plugin-transform-es2015-spread"), { "loose": loose }],
             enableFor('5.12') && require('babel-plugin-transform-es2015-parameters'),
             enableFor('5.12') && require('babel-plugin-transform-es2015-sticky-regex'),
             enableFor('5.12') && require('babel-plugin-transform-es2015-unicode-regex'),
-// ---- v6.2
+// ---- <= v6.2
             enableFor('6.2') && require('babel-plugin-array-includes').default,
-// ---- v6.4
+// ---- <= v6.4
             enableFor('6.4') && [require("babel-plugin-transform-es2015-destructuring"), { "loose": loose }],
             enableFor('6.4') && require('babel-plugin-transform-es2015-function-name'),
-// ---- v6.5
-            enableFor('6.5') && require('babel-plugin-syntax-trailing-function-commas'), // ES2017
-            enableFor('6.5') && require('babel-plugin-transform-es2015-duplicate-keys'),
-            enableFor('6.5') && require('babel-plugin-transform-exponentiation-operator'), // ES2016
+// ---- >= v6.5
+            require('babel-plugin-syntax-trailing-function-commas'), // ES2017
+            require('babel-plugin-transform-es2015-duplicate-keys'),
+            require('babel-plugin-transform-exponentiation-operator'), // ES2016
 // --- MODULES
             modules === "amd" && [require("babel-plugin-transform-es2015-modules-amd"), { "loose": loose }],
             modules === "commonjs" && [require("babel-plugin-transform-es2015-modules-commonjs"), { "loose": loose }],
