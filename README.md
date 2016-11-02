@@ -12,6 +12,14 @@ transformations as possible.
 [![npm version](https://img.shields.io/npm/v/babel-preset-modern-node.svg?style=flat-square)](https://www.npmjs.com/package/babel-preset-modern-node)
 [![npm downloads](https://img.shields.io/npm/dm/babel-preset-modern-node.svg?style=flat-square)](https://www.npmjs.com/package/babel-preset-modern-node)
 
+# Deprecated - No longer maintained
+
+My focus has left the node ecosystem and also the awesome [babel-team][] 
+came up with [babel-preset-env][]. So please do yourself a favor and 
+switch over to [babel-preset-env][]. 
+
+Thank you for your patience and using this module in the first place!
+
 ## Installation
 
     npm install --save-dev babel-preset-modern-node
@@ -95,3 +103,5 @@ not able to fully support ES2016's `Array.includes`
   [transform-es3-property-literals]: https://www.npmjs.com/package/babel-plugin-transform-es3-property-literals
   [transform-strict-mode]: https://www.npmjs.com/package/babel-plugin-transform-strict-mode
   [plugin-array-includes]: https://www.npmjs.com/package/babel-plugin-array-includes
+  [babel-preset-env]: https://github.com/babel/babel-preset-env
+  [babel-team]: https://github.com/babel
