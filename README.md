@@ -96,6 +96,10 @@ not able to fully support ES2016's `Array.includes`
     * `default: "bar"` becomes `"default": "bar"`
         * See [transform-es3-property-literals][]
 
+### Alternatives
+
+- https://github.com/babel/babel-preset-env 
+
   [1]: http://www.2ality.com/2015/11/configuring-babel6.html
   [babel-preset-modern-node]: https://github.com/michaelcontento/babel-preset-modern-node
   [plugin-version-inline]: https://www.npmjs.com/package/babel-plugin-version-inline
